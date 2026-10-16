@@ -8,12 +8,6 @@ import mascotBoy from "../../assets/images/mascot-boy1.png";
 
 // 360 Rotation Frames
 import frame01 from "../../assets/images/rotation/front.png";
-import frame02 from "../../assets/images/rotation/02-front-right.png";
-import frame03 from "../../assets/images/rotation/03-right.png";
-// import frame04 from "../../assets/images/rotation/04-back-right.png";
-import frame05 from "../../assets/images/rotation/05-back.png";
-import frame06 from "../../assets/images/rotation/06-back-left.png";
-import frame07 from "../../assets/images/rotation/left.png";
 // import frame08 from "../../assets/images/rotation/08-front-left.png";
 // import frame09 from "../../assets/images/rotation/09-front.png";
 
