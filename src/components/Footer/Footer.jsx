@@ -31,7 +31,7 @@ function Footer() {
   </div>
 
   <a
-    href="https://wa.me/YOURNUMBER?text=Hi%20Vikas,%20I%20have%20an%20enquiry%20about%20your%20services."
+    href="https://wa.me/919358949856?text=Hi%20Vikas,%20I%20have%20an%20enquiry%20about%20your%20services."
     target="_blank"
     rel="noopener noreferrer"
     className="footer-whatsapp-btn"
@@ -67,11 +67,11 @@ function Footer() {
         <div className="footer-links">
           <h3>My Services</h3>
 
-          <a href="">Website Development</a>
-          <a href="">React Frontend</a>
-          <a href="">Wordpress Customization</a>
-          <a href="">Backend Development</a>
-          <a href="">Web App & Admin Panel Development</a>
+          <a href="#contact">Website Development</a>
+          <a href="#contact">React Frontend</a>
+          <a href="#contact">Wordpress Customization</a>
+          <a href="#contact">Backend Development</a>
+          <a href="#contact">Web App & Admin Panel Development</a>
         </div>
 
         <div className="footer-social">

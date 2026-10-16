@@ -5,7 +5,6 @@ import emailjs from "@emailjs/browser";
 import phoneImage from "../../assets/images/telephone.png";
 function Contact() {
 
-  const [sceneStarted, setSceneStarted] = useState(false);
   const [phoneReady, setPhoneReady] = useState(false);
   const [boyReady, setBoyReady] = useState(false);
 
