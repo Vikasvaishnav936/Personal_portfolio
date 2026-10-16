@@ -1,0 +1,145 @@
+.projects {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 20px;
+}
+.swiper{
+    width:100%;
+    padding:20px 10px 50px !important;
+}
+
+.swiper-slide{
+    height:auto;
+}
+
+.swiper-slide .project-card{
+    height:100%;
+}
+
+.projects-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    max-width: 1400px;
+    margin: auto;
+    padding: 20px 0 60px;
+}
+
+.projects-slider .swiper {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.projects-slider .swiper-slide {
+    height: auto;
+}
+
+.projects-slider .project-card {
+    height: 100%;
+}
+
+
+/* External arrows */
+.slider-prev,
+.slider-next {
+    flex-shrink: 0;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+    border: 1px solid #FF5A1F;
+
+    background: white;
+    color: #FF5A1F;
+
+    font-size: 25px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all .3s ease;
+}
+
+.slider-prev:hover,
+.slider-next:hover {
+    background: #FF5A1F;
+    color: white;
+}
+
+
+
+.projects-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.projects-heading span {
+    color: #FF5A1F;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.projects-heading h2 {
+    font-size: 36px;
+    margin: 10px 0 15px;
+}
+
+.projects-heading p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.7;
+    color: #64748b;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+}
+@media (max-width: 768px) {
+  
+
+     .projects-slider {
+        display: block;
+        width: 100%;
+        padding: 10px 0px 55px;
+        box-sizing: border-box;
+    }
+
+    .projects-slider .swiper {
+        width:95%;
+    }
+
+    .projects-slider .swiper-slide {
+        width: 100% !important;
+    }
+
+    .projects-slider .project-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .slider-prev,
+    .slider-next {
+        width: 34px;
+        height: 34px;
+
+        font-size: 18px;
+    }
+
+    .slider-prev {
+        left: 3px;
+    }
+
+    .slider-next {
+        right: 3px;
+    }
+
+
+}

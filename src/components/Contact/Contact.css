@@ -1,0 +1,1193 @@
+/* =========================================================
+   CONTACT SECTION
+========================================================= */
+
+.contact {
+    max-width: 1100px;
+    margin: auto;
+    padding: 4px 20px;
+}
+
+
+/* =========================================================
+   CONTACT HEADING
+========================================================= */
+
+.contact-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-heading span {
+    color: #FF5A1F;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.contact-heading h2 {
+    font-size: 38px;
+    margin: 10px 0;
+}
+
+.contact-heading p {
+    color: #2c2d2e;
+    margin: 0;
+}
+
+
+/* =========================================================
+   PHONE STAGE
+========================================================= */
+
+.phone-stage {
+    position: relative;
+
+    width: 100%;
+    max-width: 1000px;
+
+    height: 510px;
+
+    margin: auto;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   TELEPHONE WRAPPER
+========================================================= */
+
+.telephone-wrapper {
+    position: absolute;
+
+    left: 50%;
+    bottom: 45px;
+
+    width: 390px;
+    height: 350px;
+
+    transform:
+        translateX(-50%)
+        translateY(80px)
+        scale(.8);
+
+    opacity: 0;
+
+    z-index: 10;
+
+    cursor: pointer;
+
+    animation:
+        telephoneEnter 1s
+        cubic-bezier(.2, .8, .2, 1)
+        forwards;
+}
+
+
+/* =========================================================
+   TELEPHONE ENTER ANIMATION
+========================================================= */
+
+@keyframes telephoneEnter {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateX(-50%)
+            translateY(100px)
+            scale(.65);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translateX(-50%)
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================================================
+   NORMAL TELEPHONE
+========================================================= */
+
+.normal-telephone {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+
+.telephone-image {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+    filter:
+        drop-shadow(
+            0 20px 25px rgba(0, 0, 0, .20)
+        );
+}
+
+
+/* =========================================================
+   RINGING TELEPHONE
+========================================================= */
+
+.ringing-telephone {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    animation:
+        phoneShake .11s
+        linear
+        infinite;
+}
+
+
+
+
+
+
+
+
+/* =========================================================
+   RINGING TELEPHONE
+========================================================= */
+
+.ringing-telephone {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    animation:
+        phoneShake .12s
+        linear
+        infinite;
+}
+
+
+/* =========================================================
+   KEEP COMPLETE IMAGE INTACT
+   IMPORTANT:
+   Do NOT crop telephone.png
+========================================================= */
+
+.ringing-phone-body {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+    filter:
+        drop-shadow(
+            0 20px 25px rgba(0, 0, 0, .22)
+        );
+}
+
+
+/* =========================================================
+   HIDE OLD RECEIVER OVERLAY
+========================================================= */
+
+.receiver-layer {
+    display: none !important;
+}
+
+
+/* =========================================================
+   PHONE SHAKE
+========================================================= */
+
+@keyframes phoneShake {
+
+    0% {
+        transform:
+            translateX(-2px)
+            rotate(-0.6deg);
+    }
+
+    50% {
+        transform:
+            translateX(2px)
+            rotate(0.6deg);
+    }
+
+    100% {
+        transform:
+            translateX(-2px)
+            rotate(-0.6deg);
+    }
+}
+
+
+
+
+/* =========================================================
+   PHONE SHAKE
+========================================================= */
+
+@keyframes phoneShake {
+
+    0% {
+        transform:
+            translateX(-3px)
+            rotate(-1deg);
+    }
+
+    50% {
+        transform:
+            translateX(3px)
+            rotate(1deg);
+    }
+
+    100% {
+        transform:
+            translateX(-3px)
+            rotate(-1deg);
+    }
+}
+
+
+/* =========================================================
+   RING WAVES
+========================================================= */
+
+.ring-wave {
+    position: absolute;
+
+    top: 20px;
+
+    width: 55px;
+    height: 95px;
+
+    border-top:
+        4px solid #FF5A1F;
+
+    border-bottom:
+        4px solid #FF5A1F;
+
+    border-radius: 50%;
+
+    z-index: 40;
+
+    animation:
+        ringWave .65s
+        ease-out
+        infinite;
+}
+
+
+/* LEFT WAVE */
+
+.ring-wave-left {
+    left: -65px;
+}
+
+
+/* RIGHT WAVE */
+
+.ring-wave-right {
+    right: -65px;
+
+    animation-delay: .2s;
+}
+
+
+/* =========================================================
+   RING WAVE ANIMATION
+========================================================= */
+
+@keyframes ringWave {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            scale(.6);
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            scale(1.35);
+    }
+}
+
+
+/* =========================================================
+   INCOMING CALL
+========================================================= */
+
+.incoming-call {
+    position: absolute;
+
+    left: 50%;
+    bottom: -35px;
+
+    transform:
+        translateX(-50%);
+
+    z-index: 60;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding:
+        11px 18px;
+
+    background:
+        rgba(255, 255, 255, .97);
+
+    border:
+        1px solid #FF5A1F;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, .14);
+
+    white-space: nowrap;
+
+    animation:
+        callCardPulse 1s
+        ease-in-out
+        infinite;
+}
+
+
+/* =========================================================
+   INCOMING PHONE ICON
+========================================================= */
+
+.incoming-phone-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        #FF5A1F;
+
+    color: white;
+
+    font-size: 20px;
+
+    animation:
+        phoneIconRing .5s
+        infinite;
+}
+
+
+/* =========================================================
+   INCOMING CALL TEXT
+========================================================= */
+
+.incoming-call-text strong {
+    display: block;
+
+    color: #111;
+
+    font-size: 14px;
+}
+
+.incoming-call-text span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #FF5A1F;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   INCOMING CALL ANIMATION
+========================================================= */
+
+@keyframes phoneIconRing {
+
+    0% {
+        transform:
+            rotate(0deg);
+    }
+
+    25% {
+        transform:
+            rotate(-15deg);
+    }
+
+    75% {
+        transform:
+            rotate(15deg);
+    }
+
+    100% {
+        transform:
+            rotate(0deg);
+    }
+}
+
+
+@keyframes callCardPulse {
+
+    0%,
+    100% {
+        transform:
+            translateX(-50%)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translateX(-50%)
+            scale(1.04);
+    }
+}
+
+
+/* =========================================================
+   CONTACT CHARACTER / SPEECH BUBBLE
+========================================================= */
+
+.contact-character {
+    position: absolute;
+
+    left:
+        calc(50% + 190px);
+
+    bottom: 155px;
+
+    z-index: 30;
+
+    animation:
+        characterAppear .8s
+        ease
+        forwards;
+}
+
+
+/* =========================================================
+   SPEECH BUBBLE
+========================================================= */
+
+.speech-bubble {
+    position: relative;
+left: -150px;
+    top: -245px;
+    width: 165px;
+
+    padding:
+        15px 18px;
+
+    background:
+        white;
+
+    border:
+        2px solid #FF5A1F;
+
+    border-radius:
+        18px;
+
+    text-align:
+        center;
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, .08);
+
+    animation:
+        bubbleFloat 2s
+        ease-in-out
+        infinite;
+}
+
+
+/* Speech bubble pointer */
+
+.speech-bubble::after {
+    content: "";
+
+    position: absolute;
+
+    left: 25px;
+
+    bottom: -12px;
+
+    width: 20px;
+    height: 20px;
+
+    background:
+        white;
+
+    border-right:
+        2px solid #FF5A1F;
+
+    border-bottom:
+        2px solid #FF5A1F;
+
+    transform:
+        rotate(45deg);
+}
+
+
+/* Speech heading */
+
+.speech-bubble strong {
+    display: block;
+
+    font-size: 16px;
+
+    color:
+        #111;
+}
+
+
+/* Speech text */
+
+.speech-bubble span {
+    display: block;
+
+    margin-top: 5px;
+
+    color:
+        #FF5A1F;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   CHARACTER APPEAR
+========================================================= */
+
+@keyframes characterAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateX(60px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateX(0);
+    }
+}
+
+
+/* =========================================================
+   SPEECH FLOAT
+========================================================= */
+
+@keyframes bubbleFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-5px);
+    }
+}
+
+
+/* =========================================================
+   CLICK INDICATOR
+========================================================= */
+
+.click-indicator {
+    position: absolute;
+
+    left: 50%;
+    bottom: 5px;
+
+    transform:
+        translateX(-50%);
+
+    z-index: 70;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color:
+        #111;
+
+    white-space:
+        nowrap;
+
+    animation:
+        clickPulse 1.5s
+        ease-in-out
+        infinite;
+}
+
+
+/* Orange dot */
+
+.click-dot {
+    display:
+        inline-block;
+
+    width: 9px;
+    height: 9px;
+
+    margin-right: 8px;
+
+    background:
+        #FF5A1F;
+
+    border-radius:
+        50%;
+}
+
+
+/* =========================================================
+   CLICK PULSE
+========================================================= */
+
+@keyframes clickPulse {
+
+    0%,
+    100% {
+        opacity: .45;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   CONTACT FORM REVEAL
+========================================================= */
+
+.contact-reveal {
+    animation:
+        contactReveal .9s
+        cubic-bezier(.2, .8, .2, 1)
+        forwards;
+}
+
+
+@keyframes contactReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(60px)
+            scale(.96);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================================================
+   CONTACT CONTENT
+========================================================= */
+
+.contact-content {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 50px;
+
+    align-items:
+        start;
+}
+
+
+/* =========================================================
+   CONTACT INFO
+========================================================= */
+
+.contact-info {
+    background:
+        linear-gradient(
+            295deg,
+            rgb(248 238 230 / 19%) 26.56%,
+            rgb(255 213 191 / 30%) 100%
+        );
+
+    color:
+        rgb(0, 0, 0);
+
+    padding:
+        35px;
+
+    border-radius:
+        20px;
+}
+
+
+.contact-info h3 {
+    font-size:
+        26px;
+
+    margin-bottom:
+        15px;
+}
+
+
+.contact-info > p {
+    color:
+        #292929;
+
+    line-height:
+        1.7;
+
+    margin-bottom:
+        30px;
+}
+
+
+.contact-info h4 {
+    color:
+        #FF5A1F;
+
+    margin-bottom:
+        5px;
+}
+
+
+.contact-info div p {
+    color:
+        #292929;
+
+    margin-top:
+        0;
+}
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+.contact-form-wrapper {
+    width: 100%;
+}
+
+
+.contact-form {
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        18px;
+}
+
+
+.contact-form input,
+.contact-form textarea {
+    width:
+        100%;
+
+    box-sizing:
+        border-box;
+
+    padding:
+        15px 18px;
+
+    border:
+        1px solid #cbd5e1;
+
+    border-radius:
+        10px;
+
+    font-size:
+        15px;
+
+    font-family:
+        inherit;
+
+    outline:
+        none;
+
+    transition:
+        .3s ease;
+}
+
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color:
+        #FF5A1F;
+
+    box-shadow:
+        0 0 10px
+        rgba(255, 90, 31, .15);
+}
+
+
+.contact-form textarea {
+    resize:
+        vertical;
+}
+
+
+/* =========================================================
+   SEND BUTTON
+========================================================= */
+
+.contact-form button {
+    width:
+        fit-content;
+
+    padding:
+        13px 25px;
+
+    background:
+        #FF5A1F;
+
+    color:
+        #ffffff;
+
+    border:
+        none;
+
+    border-radius:
+        8px;
+
+    font-size:
+        15px;
+
+    font-weight:
+        600;
+
+    cursor:
+        pointer;
+
+    transition:
+        .3s ease;
+}
+
+
+.contact-form button:hover {
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 15px 40px
+        #d8ae9f4f;
+}
+
+
+/* =========================================================
+   FORM STATUS
+========================================================= */
+
+.form-status {
+    margin:
+        0;
+
+    color:
+        #FF5A1F;
+
+    font-size:
+        14px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .contact {
+        padding:
+            40px 15px;
+    }
+
+
+    .contact-heading {
+        margin-bottom:
+            20px;
+    }
+
+
+    .contact-heading h2 {
+        font-size:
+            30px;
+    }
+
+
+    .contact-heading p {
+        font-size:
+            14px;
+    }
+
+
+    /* -------------------------------
+       PHONE STAGE
+    ------------------------------- */
+
+    .phone-stage {
+        height:
+            485px;
+    }
+
+
+    /* -------------------------------
+       TELEPHONE
+    ------------------------------- */
+
+    .telephone-wrapper {
+        width:
+            290px;
+
+        height:
+            290px;
+
+        bottom:
+            70px;
+    }
+
+
+    /* -------------------------------
+       SPEECH BUBBLE
+    ------------------------------- */
+
+    .contact-character {
+        left:
+            auto;
+
+        right:
+            10px;
+
+        bottom:
+            155px;
+    }
+
+
+    .speech-bubble {
+        width:
+            130px;
+
+        padding:
+            12px 14px;
+    }
+
+
+    .speech-bubble strong {
+        font-size:
+            14px;
+    }
+
+
+    .speech-bubble span {
+        font-size:
+            11px;
+    }
+
+
+    /* -------------------------------
+       RING WAVES
+    ------------------------------- */
+
+    .ring-wave-left {
+        left:
+            -45px;
+    }
+
+
+    .ring-wave-right {
+        right:
+            -45px;
+    }
+
+
+    /* -------------------------------
+       INCOMING CALL
+    ------------------------------- */
+
+    .incoming-call {
+        bottom:
+            -30px;
+
+        padding:
+            8px 12px;
+
+        gap:
+            8px;
+    }
+
+
+    .incoming-phone-icon {
+        width:
+            32px;
+
+        height:
+            32px;
+
+        font-size:
+            17px;
+    }
+
+
+    .incoming-call-text strong {
+        font-size:
+            12px;
+    }
+
+
+    .incoming-call-text span {
+        font-size:
+            10px;
+    }
+
+
+    /* -------------------------------
+       CLICK TEXT
+    ------------------------------- */
+
+    .click-indicator {
+        font-size:
+            12px;
+
+        bottom:
+            20px;
+    }
+
+
+    /* -------------------------------
+       CONTACT FORM
+    ------------------------------- */
+
+    .contact-content {
+        grid-template-columns:
+            1fr;
+
+        gap:
+            30px;
+    }
+
+
+    .contact-info {
+        padding:
+            25px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .phone-stage {
+        height:
+            480px;
+    }
+
+
+    .telephone-wrapper {
+        width:
+            260px;
+
+        height:
+            260px;
+
+        bottom:
+            70px;
+    }
+
+
+    .contact-character {
+        right:
+            0;
+
+        bottom:
+            145px;
+    }
+
+
+    .speech-bubble {
+        width:
+            115px;
+
+        padding:
+            10px 12px;
+    }
+
+
+    .speech-bubble strong {
+        font-size:
+            13px;
+    }
+
+
+    .speech-bubble span {
+        font-size:
+            10px;
+    }
+
+
+    .click-indicator {
+        font-size:
+            11px;
+    }
+
+}

@@ -1,0 +1,530 @@
+/* =========================================
+   MAIN SECTION
+========================================= */
+
+.developer-desk {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 700px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(255, 90, 31, 0.08),
+            transparent 35%
+        ),
+        #fffdfb;
+
+    color: #111;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.desk-intro {
+    position: absolute;
+
+    top: 110px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 90%;
+
+    text-align: center;
+
+    z-index: 20;
+}
+
+
+.desk-intro span {
+    display: block;
+    color: #FF5A1F;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+
+.desk-intro h2 {
+    margin: 14px 0 10px;
+
+       font-size: 36px;
+    line-height: 1.05;
+    font-weight: 700;
+}
+
+
+.desk-intro h2 strong {
+    color: #ff5a1f;
+}
+
+
+.desk-intro p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 16px;
+}
+
+
+.scroll-hint {
+    margin-top: 22px;
+
+    font-size: 13px;
+
+    color: #ff5a1f;
+
+    font-weight: 600;
+
+    animation: scrollHint 1.5s ease-in-out infinite;
+}
+
+
+@keyframes scrollHint {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(7px);
+    }
+}
+
+
+/* =========================================
+   DESK SCENE
+========================================= */
+
+.desk-scene {
+    position: absolute;
+
+    left: 50%;
+    top: 46%;
+
+    transform: translate(-50%, -50%);
+
+    width: min(1100px, 90vw);
+    height: 700px;
+
+    z-index: 5;
+}
+
+
+/* =========================================
+   GLOW
+========================================= */
+
+.desk-glow {
+    position: absolute;
+
+    left: 50%;
+    top: 52%;
+
+    transform: translate(-50%, -50%);
+
+    width: 650px;
+    height: 350px;
+
+    background: rgba(255, 90, 31, 0.08);
+
+    filter: blur(70px);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+.desk-wall-glow {
+    position: absolute;
+
+    left: 50%;
+    top: 40%;
+
+    transform: translate(-50%, -50%);
+
+    width: 500px;
+    height: 250px;
+
+    background: rgba(255, 180, 130, 0.12);
+
+    filter: blur(80px);
+
+    border-radius: 50%;
+}
+
+
+/* =========================================
+   COMMON OBJECT
+========================================= */
+
+.desk-object {
+    position: absolute;
+
+    object-fit: contain;
+
+    user-select: none;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   LAPTOP
+========================================= */
+
+.laptop-wrapper {
+    position: absolute;
+
+    left: 50%;
+    top: 80px;
+
+    transform: translateX(-50%);
+
+    width: 510px;
+    height: 360px;
+
+    z-index: 10;
+}
+
+
+.desk-laptop {
+    width: 100%;
+    height: auto;
+
+    left: 0;
+    top: 0;
+
+    z-index: 10;
+}
+
+
+/* =========================================
+   LAPTOP SCREEN
+========================================= */
+
+.screen-content {
+    position: absolute;
+
+    left: 15%;
+    top: 9%;
+
+    width: 69%;
+    height: 47%;
+
+    z-index: 11;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+
+    transform: perspective(600px) rotateX(1deg);
+
+    background: #101318;
+
+    box-shadow:
+        inset 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+
+.code-window {
+    width: 100%;
+    height: 100%;
+}
+
+
+.code-top {
+    height: 18px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+    padding-left: 8px;
+
+    background: #181b21;
+}
+
+
+.code-top span {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #ff5a1f;
+}
+
+
+.code-body {
+    padding: 12px;
+
+    font-family:
+        "Fira Code",
+        Consolas,
+        monospace;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+
+    color: #d7dee7;
+}
+
+
+.screen-line {
+    white-space: nowrap;
+}
+
+
+.screen-line i {
+    color: #ff8a65;
+
+    font-style: normal;
+}
+
+
+.build-status {
+    margin-top: 7px;
+
+    color: #ff7043;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   KEYBOARD
+========================================= */
+
+.desk-keyboard {
+    width: 290px;
+
+    left: 50%;
+    top: 400px;
+
+    transform: translateX(-50%);
+
+    z-index: 12;
+}
+
+
+/* =========================================
+   NOTEBOOK
+========================================= */
+
+.desk-notebook {
+    width: 220px;
+
+    left: 80px;
+    top: 290px;
+
+    z-index: 8;
+}
+
+
+/* =========================================
+   BULB
+========================================= */
+
+.desk-bulb {
+    width: 150px;
+
+    right: 184px;
+    top: 130px;
+
+    z-index: 8;
+}
+
+
+/* =========================================
+   COFFEE
+========================================= */
+
+.desk-coffee {
+    width: 120px;
+
+    right: 205px;
+    top: 365px;
+
+    z-index: 13;
+}
+
+
+/* =========================================
+   FINAL CTA
+========================================= */
+
+.desk-final {
+    position: absolute;
+
+    left: 50%;
+    top: 600px;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    text-align: center;
+
+    z-index: 30;
+}
+
+
+.desk-final > span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #ff5a1f;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+
+.desk-final h3 {
+    margin: 0 0 18px;
+
+    font-size: 30px;
+
+    font-weight: 800;
+}
+
+
+.desk-final h3 strong {
+    color: #ff5a1f;
+}
+
+
+.desk-final a {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 12px;
+
+    padding: 13px 24px;
+
+    background: #ff5a1f;
+
+    color: white;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 12px 30px rgba(255, 90, 31, 0.25);
+
+    transition: 0.3s ease;
+}
+
+
+.desk-final a span {
+    font-size: 18px;
+
+    transition: 0.3s ease;
+}
+
+
+.desk-final a:hover {
+    background: #e94b14;
+
+    transform: translateY(-3px);
+}
+
+
+.desk-final a:hover span {
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .desk-intro {
+        top: 90px;
+    }
+
+    .desk-intro h2 {
+        font-size: 42px;
+    }
+
+    .desk-scene {
+        width: 95vw;
+        transform: translate(-50%, -35%) scale(0.85);
+    }
+
+    .desk-notebook {
+        left: 10px;
+    }
+
+    .desk-bulb {
+        right: 30px;
+    }
+}
+
+
+@media (max-width: 640px) {
+
+    .developer-desk {
+        min-height: 650px;
+    }
+
+    .desk-intro {
+        top: 90px;
+    }
+
+    .desk-intro span {
+        font-size: 9px;
+        letter-spacing: 3px;
+    }
+
+    .desk-intro h2 {
+        font-size: 31px;
+    }
+
+    .desk-intro p {
+        font-size: 13px;
+    }
+
+    .desk-scene {
+        top: 54%;
+
+        width: 700px;
+        height: 500px;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.55);
+    }
+
+    .desk-final {
+        bottom: -30px;
+    }
+
+    .desk-final h3 {
+        font-size: 22px;
+    }
+}

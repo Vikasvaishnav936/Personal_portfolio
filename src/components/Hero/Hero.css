@@ -1,0 +1,1187 @@
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    position: relative;
+
+    /*
+     * 180vh = enough scrolling
+     * for the complete intro animation.
+     *
+     * Pehle 15% = Portfolio
+     * Next 57% = 360 rotation
+     * Last 30% = content reveal
+     */
+
+     height: 230vh;
+
+    background:
+        linear-gradient(
+            295deg,
+            rgb(248 238 230 / 19%) 26.56%,
+            rgb(255 213 191 / 30%) 100%
+        );
+
+    overflow: clip;
+}
+
+
+/* =========================================================
+   STICKY STAGE
+========================================================= */
+
+.hero-stage {
+    position: sticky;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 40px 80px;
+
+    overflow: visible;
+
+    z-index: 2;
+}
+
+/* =========================================================
+   PORTFOLIO INTRO
+========================================================= */
+
+.portfolio-intro {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 100;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            295deg,
+            rgb(248 238 230 / 100%),
+            rgb(255 213 191 / 100%)
+        );
+
+    will-change:
+        opacity,
+        transform;
+}
+
+
+.portfolio-intro-inner {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+.portfolio-small {
+    font-size: 15px;
+
+    font-weight: 700;
+
+    letter-spacing: 7px;
+
+    color: #ff5a1f;
+
+    margin-bottom: 18px;
+}
+
+
+.portfolio-intro h1 {
+    margin: 0;
+
+    font-size:
+        clamp(80px, 13vw, 190px);
+
+    line-height: .85;
+
+    font-weight: 900;
+
+    letter-spacing: -7px;
+
+    color: #111;
+
+    text-shadow:
+        10px 10px 0 rgb(255 90 31 / 12%);
+}
+
+
+.portfolio-scroll {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 35px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    color: #777;
+}
+
+
+.scroll-arrow {
+    color: #ff5a1f;
+
+    font-size: 25px;
+
+    animation:
+        scrollArrow 1.3s ease-in-out infinite;
+}
+
+
+@keyframes scrollArrow {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+
+/* =========================================================
+   BACKGROUND SHAPES
+========================================================= */
+
+.hero-animation {
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+.float-shape {
+    position: absolute;
+
+    display: block;
+
+    border-radius: 50%;
+
+    filter: blur(2px);
+
+    opacity: .15;
+}
+
+
+.shape-one {
+    width: 300px;
+
+    height: 300px;
+
+    background: #ff5a1f;
+
+    right: 19%;
+
+    top: 15%;
+
+    animation:
+        floatOne 9s ease-in-out infinite;
+}
+
+
+.shape-two {
+    width: 160px;
+
+    height: 160px;
+
+    background: #ff9a76;
+
+    right: 51%;
+
+    top: 55%;
+
+    animation:
+        floatTwo 7s ease-in-out infinite;
+}
+
+
+.shape-three {
+    width: 90px;
+
+    height: 90px;
+
+    background: #ff5a1f;
+
+    left: 6%;
+
+    top: 20%;
+
+    animation:
+        floatThree 6s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   BACKGROUND FLOAT
+========================================================= */
+
+@keyframes floatOne {
+
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(35px, -25px);
+    }
+
+    50% {
+        transform: translate(10px, 45px);
+    }
+
+    75% {
+        transform: translate(-35px, 20px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+@keyframes floatTwo {
+
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(-30px, 30px);
+    }
+
+    50% {
+        transform: translate(25px, 55px);
+    }
+
+    75% {
+        transform: translate(45px, -20px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+@keyframes floatThree {
+
+    0% {
+        transform: translate(0, 0);
+    }
+
+    30% {
+        transform: translate(45px, 20px);
+    }
+
+    60% {
+        transform: translate(-20px, 55px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.left {
+    width: 50%;
+
+    position: relative;
+
+    z-index: 5;
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.hero-content {
+    will-change:
+        transform,
+        opacity;
+}
+
+
+.reveal-item {
+    will-change:
+        transform,
+        opacity;
+}
+
+
+/* Hello */
+
+.left > p:first-child {
+    margin-bottom: 5px;
+}
+
+
+/* Name */
+
+.left h1 {
+    font-size: 55px;
+
+    margin: 12px 0;
+
+    line-height: 1.05;
+}
+
+
+/* Typing */
+
+.typing {
+    color: #ff5a1f;
+
+    font-size: 35px;
+
+    margin-bottom: 15px;
+
+    font-weight: 600;
+
+    min-height: 40px;
+
+    margin-right: 30px;
+    margin-left:-351px;
+}
+
+
+/* Description */
+
+.desc {
+    line-height: 25px;
+
+    max-width: 500px;
+    margin: 8px 0;
+}
+
+
+/* Experience */
+
+.experience-text {
+    margin-top: 12px;
+}
+
+
+.experience-text strong {
+    color: #ff5a1f;
+
+    font-size: 30px;
+
+    margin-right: 6px;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.buttons {
+    margin-top: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0;
+}
+
+
+.hire-btn {
+    display: inline-block;
+
+    padding: 15px 35px;
+
+    background: #ff5a1f;
+
+    color: #fff;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    transition: .3s ease;
+
+    margin-right: 20px;
+}
+
+
+.hire-btn:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px #d8ae9f4f;
+}
+
+
+.outline {
+    background: transparent;
+
+    border: 2px solid #ff5a1f;
+
+    border-radius: 8px;
+
+    color: #000;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    padding: 12px 35px;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+    transition: .3s ease;
+}
+
+
+.outline:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px #d8ae9f4f;
+}
+
+
+/* =========================================================
+   SOCIAL
+========================================================= */
+
+.social-icons {
+    display: flex;
+
+    gap: 20px;
+
+    margin-top: 25px;
+}
+
+
+.social-icons a {
+    width: 40px;
+
+    height: 40px;
+
+    border: 2px solid #ff5a1f;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #ff5a1f;
+
+    font-size: 22px;
+
+    transition: .3s;
+}
+
+
+.social-icons a:hover {
+    background: #ff5a1f;
+
+    color: white;
+
+    transform: translateY(-8px);
+}
+
+
+/* =========================================================
+   RIGHT PROFILE
+========================================================= */
+
+.right {
+    width: 50%;
+}
+
+
+.profile-area {
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 600px;
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   FRAME WRAPPER
+========================================================= */
+
+.profile-frame-wrapper {
+    position: relative;
+top:38px;
+     width: 450px;
+    height: 450px;
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    will-change:
+        transform,
+        opacity;
+
+    z-index: 3;
+}
+
+
+/* Actual frame */
+
+.rotation-frame {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+    user-select: none;
+
+    pointer-events: none;
+
+    -webkit-user-drag: none;
+}
+
+
+/* =========================================================
+   MASCOT
+========================================================= */
+
+.mascot {
+    position: absolute;
+
+    left: 148px;
+
+    bottom: 20px;
+
+    width: 300px;
+
+    height: 300px;
+
+    z-index: 20;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateX(50px)
+        translateY(25px)
+        scale(.85);
+
+    transition:
+        opacity .35s ease,
+        transform .46s cubic-bezier(.17,.67,.3,1.3),
+        visibility .35s ease;
+}
+.profile-area:hover .mascot {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateX(0)
+        translateY(0)
+        scale(1);
+
+    pointer-events: auto;
+}
+
+
+
+
+/* =========================================================
+   MASCOT BOY
+========================================================= */
+
+.mascot-boy {
+    position: absolute;
+
+    z-index: 999;
+
+    width: 150px;
+
+    height: 180px;
+
+    left: -30px;
+
+    bottom: 90px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    animation:
+        boyFloat 2s ease-in-out infinite;
+}
+
+
+.mascot-boy img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* =========================================================
+   RAYS
+========================================================= */
+
+.mascot-rays {
+    position: absolute;
+
+    left: -31px;
+
+    bottom: 239px;
+
+    width: 45px;
+
+    height: 45px;
+}
+
+
+.mascot-rays span {
+    position: absolute;
+
+    width: 5px;
+
+    height: 15px;
+
+    background: #ff5a1f;
+
+    border-radius: 10px;
+}
+
+
+.mascot-rays span:nth-child(1) {
+    left: 2px;
+
+    top: 20px;
+
+    transform: rotate(-55deg);
+}
+
+
+.mascot-rays span:nth-child(2) {
+    left: 20px;
+
+    top: 5px;
+}
+
+
+.mascot-rays span:nth-child(3) {
+    right: 2px;
+
+    top: 18px;
+
+    transform: rotate(55deg);
+}
+
+
+/* =========================================================
+   SPEECH BUBBLE
+========================================================= */
+
+.speech-bubble {
+    position: absolute;
+
+    width: 250px;
+
+    left: -229px;
+
+    top: -127px;
+
+    padding: 19px 20px;
+
+    background: white;
+
+    border: 2px solid #ff5a1f;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, .12);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    color: #111827;
+}
+
+
+.speech-bubble::after {
+    content: "";
+
+    position: absolute;
+
+    right: 35px;
+
+    bottom: -13px;
+
+    width: 22px;
+
+    height: 22px;
+
+    background: white;
+
+    border-right: 2px solid #ff5a1f;
+
+    border-bottom: 2px solid #ff5a1f;
+
+    transform: rotate(45deg);
+}
+
+
+.speech-bubble strong {
+    font-size: 15px;
+}
+
+
+.speech-bubble span {
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    color: #555;
+}
+
+
+.speech-bubble b {
+    color: #ff5a1f;
+}
+
+
+.speech-bubble a {
+    width: fit-content;
+
+    padding: 8px 16px;
+
+    background: #ff5a1f;
+
+    color: white;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+
+.speech-bubble a:hover {
+    transform: translateX(4px);
+
+    background: #e9470e;
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.mascot-arrow {
+    position: absolute;
+
+    left: -109px;
+
+    bottom: 158px;
+
+    width: 95px;
+
+    height: 65px;
+
+    border-left: 2.5px solid #ff5a1f;
+
+    border-bottom: 2.5px solid #ff5a1f;
+
+    border-radius:
+        0 0 0 70px;
+
+    transform: rotate(4deg);
+}
+
+
+.mascot-arrow::after {
+    content: "";
+
+    position: absolute;
+
+    right: -4px;
+
+    bottom: -7px;
+
+    width: 13px;
+
+    height: 13px;
+
+    border-right: 3px solid #ff5a1f;
+
+    border-top: 3px solid #ff5a1f;
+
+    transform: rotate(45deg);
+}
+
+
+/* =========================================================
+   IDEA DECORATION
+========================================================= */
+
+.idea-decoration {
+    position: absolute;
+
+    right: 98px;
+    bottom: -40px;
+
+    width: 160px;
+
+    text-align: center;
+
+    z-index: 10;
+
+    opacity: 0;
+
+    transform:
+        rotate(-5deg)
+        translateY(30px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+}
+
+
+.idea-visible {
+    opacity: 1;
+
+    transform:
+        rotate(-5deg)
+        translateY(0);
+}
+
+
+.idea-decoration p {
+    margin: 0;
+
+    color: #ff5a1f;
+
+    font-family:
+        "Brush Script MT",
+        "Segoe Script",
+        cursive;
+
+    font-size: 27px;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+
+.idea-underline {
+    display: block;
+
+    width: 125px;
+
+    height: 12px;
+
+    margin: 7px auto 0;
+
+    border-bottom:
+        3px solid #ff5a1f;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   BOY FLOAT
+========================================================= */
+
+@keyframes boyFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translateY(-7px)
+            rotate(-2deg);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .hero-stage {
+        padding:
+            50px 40px;
+    }
+
+
+    .left h1 {
+        font-size: 48px;
+    }
+
+
+    .typing {
+        font-size: 27px;
+
+        margin-right: 0;
+        margin-left:-40px;
+    }
+
+
+    .profile-frame-wrapper {
+        width: 360px;
+
+        height: 450px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        height: 170vh;
+    }
+
+
+    .hero-stage {
+        flex-direction: column;
+
+        justify-content: center;
+
+        /* text-align: center; */
+
+        padding:
+            30px 20px;
+    }
+
+
+    .portfolio-intro h1 {
+        font-size: 65px;
+
+        letter-spacing: -4px;
+    }
+
+
+    .portfolio-small {
+        font-size: 10px;
+
+        letter-spacing: 4px;
+    }
+
+
+    .left {
+        width: 100%;
+
+        order: 2;
+    }
+
+
+    .right {
+        width: 100%;
+
+        order: 1;
+    }
+
+
+    .profile-area {
+        min-height: 360px;
+    }
+
+
+    .profile-frame-wrapper {
+        width: 280px;
+
+        height: 340px;
+    }
+
+
+    .left h1 {
+        font-size: 38px;
+
+        margin:
+            10px 0;
+    }
+
+
+    .typing {
+        font-size: 21px;
+
+        min-height: 30px;
+    }
+
+
+    .desc {
+        font-size: 14px;
+
+        line-height: 23px;
+
+        max-width: 95%;
+
+        margin:
+            15px auto;
+    }
+
+
+    .buttons {
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 12px;
+    }
+
+
+    .hire-btn {
+        margin-right: 0;
+
+        padding:
+            12px 25px;
+    }
+
+
+    .outline {
+        padding:
+            10px 25px;
+    }
+
+
+    .social-icons {
+        justify-content: center;
+
+        gap: 12px;
+
+        margin-top: 20px;
+    }
+
+
+    .mascot {
+        display: none;
+    }
+
+
+    .idea-decoration {
+        display: none;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .portfolio-intro h1 {
+        font-size: 52px;
+    }
+
+
+    .profile-frame-wrapper {
+        width: 240px;
+
+        height: 300px;
+    }
+
+
+    .left h1 {
+        font-size: 32px;
+    }
+
+
+    .typing {
+        font-size: 18px;
+    }
+
+}
